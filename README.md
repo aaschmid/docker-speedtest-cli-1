@@ -1,19 +1,24 @@
-# docker: speedtest-cli
+# docker: speedtest
 
-[![](https://badge.imagelayers.io/moutten/speedtest-cli:latest.svg)](https://imagelayers.io/?images=moutten/speedtest-cli:latest 'Get your own badge on imagelayers.io')
+![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/robertcsapo/speedtest.svg)![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/robertcsapo/speedtest.svg)![Docker Pulls](https://img.shields.io/docker/pulls/robertcsapo/speedtest.svg)  
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/speedtest-cli.svg)
 
 This is a docker image to run the [speedtest-cli commandline tool](https://github.com/sivel/speedtest-cli)
-for benchmarking ISP performance.
+for benchmarking ISP performance. Then forked from [moutten/docker-speedtest-cli](https://github.com/moutten/docker-speedtest-cli)
+
+### Demo
+
+![](demo.gif)
 
 ### Build from docker file
 
 If you want to build the docker container image yourself you can do so with the
 following commands:
 
-```bash
-git clone git@github.com:moutten/docker-speedtest-cli.git
+```
+git clone https://github.com/robertcsapo/docker-speedtest-cli.git
 cd docker-speedtest-cli
-docker build -t speedtest-cli .
+docker build -t robertcsapo/speedtest .
 ```
 
 ### Pulling from docker hub
@@ -21,20 +26,20 @@ docker build -t speedtest-cli .
 If you just want to obtain the image from the docker registry, you can use the
 following command:
 
-```bash
-docker pull moutten/speedtest-cli
+```
+docker pull robertcsapo/speedtest
 ```
 
 ### Running the command line tool
 
 In order to run the speedtest-cli command line just use the following:
 
-```bash
-docker run --rm moutten/speedtest-cli
+```
+docker run --rm robertcsapo/speedtest
 ```
 
 Any parameters that you can pass to the `speedtest-cli` command can be added to that line.
 
-```bash
-docker run --rm moutten/speedtest-cli --help
+```
+docker run --rm robertcsapo/speedtest --help
 ```
